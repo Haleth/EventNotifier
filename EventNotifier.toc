@@ -1,0 +1,8 @@
+## Interface: 50001
+## Version: 1.0
+## Title: EventNotifier
+## Notes: Uses Notifications to alert you of incoming mail and calendar invites.
+## Author: Haleth/Freethinker
+## RequiredDeps: Notifications
+
+eventnotifier.lua
