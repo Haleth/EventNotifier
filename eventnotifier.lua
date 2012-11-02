@@ -39,9 +39,9 @@ local function alertEvents()
 	local num = CalendarGetNumPendingInvites()
 	if num ~= numInvites then
 		if num > 1 then
-			Notifications:Alert(format("You have %s pending calendar invites.", num))
+			Notifications:Alert(format("You have %s pending calendar invites.", num), toggleCalendar)
 		elseif num > 0 then
-			Notifications:Alert("You have 1 pending calendar invite.")
+			Notifications:Alert("You have 1 pending calendar invite.", toggleCalendar)
 		end
 		numInvites = num
 	end
@@ -72,7 +72,7 @@ f:SetScript("OnEvent", function(_, event)
 			OpenCalendar()
 			f:RegisterEvent("CALENDAR_UPDATE_PENDING_INVITES")
 		end
-		
+
 		if checkEvents then
 			alertEvents()
 		end
@@ -86,7 +86,7 @@ f:SetScript("OnEvent", function(_, event)
 		if hasMail ~= newMail then
 			hasMail = newMail
 			if hasMail then
-				Notifications:Alert("You have new mail.")
+				Notifications:Alert("You have new mail.", nil, "Interface\\Icons\\inv_letter_15", .08, .92, .08, .92)
 			end
 		end
 	elseif event == "CALENDAR_UPDATE_PENDING_INVITES" then
