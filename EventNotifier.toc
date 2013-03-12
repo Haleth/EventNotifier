@@ -1,5 +1,5 @@
-## Interface: 50001
-## Version: 1.1
+## Interface: 50200
+## Version: 1.1.1
 ## Title: EventNotifier
 ## Notes: Uses Notifications to alert you of incoming mail and calendar invites.
 ## Author: Haleth/Freethinker
